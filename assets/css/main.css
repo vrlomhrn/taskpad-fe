@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-skyblue text-black p-[40px] flex flex-col justify-center items-center gap-2.5 h-screen;
+  }
+
+  .base-layout {
+    @apply container mx-auto flex items-start self-stretch gap-10;
+  }
+
+  .active-link {
+    @apply border-r-4 border-r-primary;
+
+    &__text {
+      @apply text-primary;
+    }
+  }
+}
+
+@layer components {
+  .aside-container {
+    @apply bg-white flex flex-col w-[318px] pt-8 pb-14 gap-14 justify-center items-center rounded-[20px];
+
+    .aside-nav {
+      @apply flex flex-col items-center self-stretch gap-4;
+
+      .nav-link {
+        @apply flex self-stretch items-center pl-2 space-x-2;
+      }
+    }
+  }
+}
