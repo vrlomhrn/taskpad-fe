@@ -4,11 +4,11 @@
 
 @layer base {
   html {
-    @apply bg-skyblue text-black p-[40px] flex flex-col justify-center items-center gap-2.5 h-screen;
+    @apply bg-skyblue text-black flex flex-col justify-center items-center gap-2.5 h-screen;
   }
 
   .base-layout {
-    @apply container h-[600px] mx-auto flex items-start self-stretch gap-10;
+    @apply h-[650px] mx-auto flex items-start self-stretch gap-10;
   }
 
   .active-link {
@@ -18,11 +18,30 @@
       @apply text-primary;
     }
   }
-}
 
+  .content-container {
+    @apply flex flex-col justify-center items-start gap-[40px] self-stretch;
+  }
+}
 @layer components {
+  .main-header-container {
+    @apply flex px-[30px] py-[15px] justify-between items-center bg-white w-[72rem] rounded-[20px];
+
+    &__search-field {
+      @apply flex items-center px-[20px] py-[8px] gap-2 rounded-md border-opacity-50;
+    }
+
+    &__profile-field {
+      @apply relative;
+
+      .avatar-user {
+        @apply bg-secondary p-2 rounded-full;
+      }
+    }
+
+  }
   .aside-container {
-    @apply bg-white w-[300px] h-full flex flex-col pb-14 gap-14 justify-center items-center rounded-[20px];
+    @apply bg-white w-[260px] h-full flex flex-col gap-14 justify-center items-center rounded-[20px];
 
     .aside-logo {
       @apply text-center space-y-1;

@@ -6,7 +6,10 @@
     <main
       class="flex flex-col justify-center items-start gap-[40px] self-stretch"
     >
-      <slot />
+      <div class="h-full overflow-hidden">
+        <TheHeader />
+        <slot />
+      </div>
     </main>
   </div>
 </template>
