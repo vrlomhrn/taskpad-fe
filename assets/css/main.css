@@ -8,11 +8,11 @@
   }
 
   .base-layout {
-    @apply container mx-auto flex items-start self-stretch gap-10;
+    @apply container h-[600px] mx-auto flex items-start self-stretch gap-10;
   }
 
   .active-link {
-    @apply border-r-4 border-r-primary;
+    @apply font-light text-opacity-60 text-primary bg-primary bg-opacity-25 border-r-4 border-r-primary;
 
     &__text {
       @apply text-primary;
@@ -22,13 +22,29 @@
 
 @layer components {
   .aside-container {
-    @apply bg-white flex flex-col w-[318px] pt-8 pb-14 gap-14 justify-center items-center rounded-[20px];
+    @apply bg-white w-[300px] h-full flex flex-col pb-14 gap-14 justify-center items-center rounded-[20px];
+
+    .aside-logo {
+      @apply text-center space-y-1;
+
+      &_header {
+        @apply text-2xl font-bold;
+      }
+
+      &_slogan {
+        @apply font-light italic;
+      }
+    }
 
     .aside-nav {
-      @apply flex flex-col items-center self-stretch gap-4;
+      @apply flex flex-col items-center self-stretch;
 
       .nav-link {
-        @apply flex self-stretch items-center pl-2 space-x-2;
+        @apply flex self-stretch items-center pl-2 space-x-2 h-12 cursor-pointer;
+
+        &__text {
+          @apply text-xl;
+        }
       }
     }
   }
