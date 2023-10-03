@@ -8,7 +8,7 @@
   }
 
   .base-layout {
-    @apply h-[650px] mx-auto flex items-start self-stretch gap-10;
+    @apply h-screen mx-auto flex items-start gap-10 py-6;
   }
 
   .active-link {
@@ -19,13 +19,14 @@
     }
   }
 
-  .content-container {
-    @apply flex flex-col justify-center items-start gap-[40px] self-stretch;
+  .main-container {
+    @apply w-[60rem] h-full;
   }
 }
+
 @layer components {
   .main-header-container {
-    @apply flex px-[30px] py-[15px] justify-between items-center bg-white w-[72rem] rounded-[20px];
+    @apply flex px-[30px] py-[15px] justify-between items-center bg-white rounded-[20px];
 
     &__search-field {
       @apply flex items-center px-[20px] py-[8px] gap-2 rounded-md border-opacity-50;
@@ -38,10 +39,10 @@
         @apply bg-secondary p-2 rounded-full;
       }
     }
-
   }
+
   .aside-container {
-    @apply bg-white w-[260px] h-full flex flex-col gap-14 justify-center items-center rounded-[20px];
+    @apply bg-white w-[250px] h-full flex flex-col gap-14 justify-center items-center rounded-[20px];
 
     .aside-logo {
       @apply text-center space-y-1;
